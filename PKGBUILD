@@ -1,4 +1,3 @@
-# $Id: PKGBUILD,v 1.4 2008/07/09 10:01:04 sergej Exp $
 # Contributor: William Rea <sillywilly@gmail.com>
 pkgname=arpack
 pkgver=2.1
