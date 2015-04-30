@@ -32,4 +32,5 @@ package() {
   install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
 }
 
+# getver: https://github.com/opencollab/arpack-ng #
 # vim:set ts=2 sw=2 et:
