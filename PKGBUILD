@@ -4,13 +4,13 @@
 
 pkgname=arpack
 pkgver=3.3.0
-pkgrel=1
+pkgrel=2
 arch=('x86_64' 'i686')
 pkgdesc='Fortran77 subroutines designed to solve large scale eigenvalue problems'
 url='https://github.com/opencollab/arpack-ng'
 license=('BSD')
 depends=('lapack' 'openmpi')
-makedepends=('openmpi' 'gcc-fortran' 'git')
+makedepends=('git' 'gcc-fortran' 'openmpi')
 provides=('arpack-ng')
 source=("git://github.com/opencollab/arpack-ng#tag=$pkgver")
 md5sums=('SKIP')
@@ -27,8 +27,8 @@ build() {
   ./configure --prefix=/usr --enable-mpi
   make \
     F77="mpif77" \
-    CFLAGS+=" `pkg-config --cflags ompi` " \
-    LIBS+=" `pkg-config --libs ompi` "
+    CFLAGS+=" `pkg-config --cflags ompi-f77` " \
+    LIBS+=" `pkg-config --libs ompi-f77` "
 }
 
 package() {
